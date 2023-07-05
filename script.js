@@ -94,7 +94,7 @@ var resumeLink = document.querySelector("#resume-button-1");
 resumeLink.addEventListener("click", function (event) {
   event.preventDefault();
   window.open(
-    "https://www.dropbox.com/s/1mknetkfgnxlbx4/Sumit-Saurabh-Resume.pdf?dl=0",
+    "https://www.dropbox.com/s/mtrij86ma0fcbwf/Sumit-Saurabh-Resume.pdf?dl=0",
     "_blank"
   );
   let link = document.createElement("a");
@@ -108,7 +108,7 @@ var resumeLink = document.querySelector("#resume-button-2");
 resumeLink.addEventListener("click", function (event) {
   event.preventDefault();
   window.open(
-    "https://www.dropbox.com/s/1mknetkfgnxlbx4/Sumit-Saurabh-Resume.pdf?dl=0",
+    "https://www.dropbox.com/s/mtrij86ma0fcbwf/Sumit-Saurabh-Resume.pdf?dl=0",
     "_blank"
   );
   let link = document.createElement("a");
@@ -122,7 +122,7 @@ var resumeLink = document.querySelector("#resume-button-last");
 resumeLink.addEventListener("click", function (event) {
   event.preventDefault();
   window.open(
-    "https://www.dropbox.com/s/1mknetkfgnxlbx4/Sumit-Saurabh-Resume.pdf?dl=0",
+    "https://www.dropbox.com/s/mtrij86ma0fcbwf/Sumit-Saurabh-Resume.pdf?dl=0",
     "_blank"
   );
   let link = document.createElement("a");
