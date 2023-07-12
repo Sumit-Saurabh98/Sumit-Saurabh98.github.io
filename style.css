@@ -781,70 +781,8 @@ nav .fas {
 }
 
 
-/* animated text */
-
-.h-text{
-
-  padding-top: 20px;
-  padding-bottom: 50px;
-
-  /* margin-left: 60px; */
-  width: 100%;
-
-}
-
-.h-animate .text{
-
-    position: relative;
-
-    color: #00C9F3;
-
-    font-size: 30px;
-
-    font-weight: 600;
-
-}
-
-.h-animate .text.first-text{
-
-    color: #FFF;
-
-}
-
-.text.sec-text:before{
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
-
-    height: 100%;
-
-    width: 100%;
-
-    background-color: black;
-
-    border-left: 2px solid #00C9F3;
-
-    animation: animate 4s steps(12) infinite;
-
-}
-
-@keyframes animate{
-
-    40%, 60%{
-
-        left: calc(100% + 4px);
-
-    }
-
-    100%{
-
-        left: 0%;
-
-    }
-
+.developer-role {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }

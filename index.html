@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
     integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
 </head>
 
 <body class="maain" style="background-color:black">
@@ -57,20 +56,9 @@
             <div class="about-col-2"  >
               <!-- <h1>👋 I'm <span style="color: #dae62e;"> Akash Saha</span>  </h1> -->
               <h1>👋 Hi, I'm <br><span>Sumit Saurabh</span></h1>
-              <!-- <p style="margin-bottom: 20px;"> a dynamic and self-motivated Full Stack Web Developer with expertise in Tech HTML, CSS, JavaScript Java, DSA, React, Redux, Node.js, Express, and MongoDB.
+              <!-- <p style="margin-bottom: 20px;"> An Aspiring Full Stack Web Developer.
               </p> -->
-              <div class="h-text">
-
-                <div class="h-animate">
-            
-                  <span class="text first-text">An Aspiring&nbsp;</span>
-            
-                  <span class="text sec-text">Developer</span>
-            
-                </div>
-
-              </div>
-            
+              <div id="role-container" class="developer-role"></div>
               <button id="resume-button-2" onclick="resume()"><a id="resume-link-2"
                   href="./Resume/Akash-Saha-Resume.pdf" download="AKASH-RESUME-DOWNLOAD"
                   target="_blank">Resume</a></button>
@@ -356,36 +344,22 @@
 
 </script>
 
-<!-- animation text -->
+
+  
 <script>
-    const text = document.querySelector(".sec-text");
+  // JavaScript code
+  const roles = [
+    "An Aspiring Full Stack Web Developer",
+    "An Aspiring Backend Developer",
+    "An Aspiring Frontend Developer"
+  ];
+  let currentIndex = 0;
+  const roleContainer = document.getElementById('role-container');
 
-const textLoad = () => {
+  function changeRole() {
+    roleContainer.innerText = roles[currentIndex];
+    currentIndex = (currentIndex + 1) % roles.length;
+  }
 
-  setTimeout(() => {
-
-    text.textContent = "Full Stack Web Developer";
-
-  }, 0);
-
-  setTimeout(() => {
-
-    text.textContent = "Frontend Developer";
-
-  }, 4000);
-
-  setTimeout(() => {
-
-    text.textContent = "Backend Developer";
-
-  }, 8000);
-
-}
-
-
-
-textLoad();
-
-setInterval(textLoad, 12000);
-
+  setInterval(changeRole, 2000);
 </script>
