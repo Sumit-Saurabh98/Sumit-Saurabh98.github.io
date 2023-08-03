@@ -75,17 +75,19 @@ emailjs.send(service_id, template_id, params)
 
 
  //git calender
-    GitHubCalendar(".calendar", "Sumit-Saurabh98");
 
-    // or enable responsive functionality:
-    GitHubCalendar(".calendar", "Sumit-Saurabh98", { responsive: true });
+//  GitHubCalendar(".calendar", "Sumit-Saurabh98");
 
-    // Use a proxy
-    GitHubCalendar(".calendar", "ySumit-Saurabh98", {
-       proxy (username) {
-         return fetch(`https://your-proxy.com/github?user=${username}`)
-       }
-    }).then(r => r.text())
+//  // or enable responsive functionality:
+//  GitHubCalendar(".calendar", "Sumit-Saurabh98", { responsive: true });
+
+//  // Use a proxy
+//  GitHubCalendar(".calendar", "Sumit-Saurabh98", {
+//     proxy (username) {
+//       return fetch(`https://your-proxy.com/github?user=${username}`)
+//     }
+//  }).then(r => r.text())
+
 //git calender end
 
  //resume
