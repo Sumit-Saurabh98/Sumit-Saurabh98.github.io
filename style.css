@@ -21,12 +21,12 @@ body{
 }
 .container{
     padding: 10px 10%;
-    border: 2px solid magenta;
 }
 
 #nav-menu{
     left: 0;
     width: 100vw;
+    padding: 0 30px;
     min-height: 6%;
     background-color: #262626;
 }
@@ -41,7 +41,7 @@ nav{
 }
 
 .logo{
-    width: 240px;
+    width: 200px;
 }
 
 nav ul li{
@@ -160,6 +160,15 @@ nav ul li a:hover::after{
 
 
 /* --------------skills------------- */
+
+#skills{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
 
 .skills-card{
     display: flex;
@@ -345,6 +354,9 @@ nav .fas{
     #home{
         background-image: url(images/phone-background.png);
     }
+        .logo {
+            width: 150px;
+        }
     .home-text{
         margin-top: 100%;
         font-size: 16px;
@@ -403,7 +415,6 @@ nav .fas{
     }
     .work-list{
         display: grid;
-        /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 40px;
         margin-top: 50px;
@@ -457,4 +468,8 @@ td{
     font-size: 45px;
     color: #FF004F; /* Count color */
   }
+
+
+
+  
 

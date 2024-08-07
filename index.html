@@ -16,18 +16,6 @@
       emailjs.init("DFOMar_u6gOUc6KiR");
    })();
 </script>
-<!-- git calender -->
-<!-- Include the library. -->
-<!-- <script
-  src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"
-></script> -->
-
-<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
-<!-- <link
-  rel="stylesheet"
-  href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"
-/> -->
-<!-- git calender -->
 </head>
 <body>
 <div id="home">
@@ -35,13 +23,12 @@
         <nav id="nav-menu" >
             <img src="images/logo.png" class="logo">
             <ul style="margin-left: 290px;" id="sidemenu">
-                <li><a href="#home" class="nav-link home">Home</a></li>
-<li><a href="#about" class="nav-link about">About</a></li>
-<li><a href="#skills" class="nav-link skills">Skills</a></li>
-<li><a href="#projects" class="nav-link projects">Projects</a></li>
-<!-- <li><a href="#statistics" class="nav-link statistics">Statistics</a></li> -->
-<li><a href="#contact" class="nav-link contact">Contact</a></li>
-<li style="cursor: pointer;" id="resume-button-1"><a id="resume-link-1" target="_blank" class="nav-link resume">Resume</a></li>
+                <li onclick="closemenu()"><a href="#home" class="nav-link home">Home</a></li>
+<li onclick="closemenu()"><a href="#about" class="nav-link about">About</a></li>
+<li onclick="closemenu()"><a href="#skills" class="nav-link skills">Skills</a></li>
+<li onclick="closemenu()"><a href="#projects" class="nav-link projects">Projects</a></li>
+<li onclick="closemenu()"><a href="#contact" class="nav-link contact">Contact</a></li>
+<li onclick="closemenu()" style="cursor: pointer;" id="resume-button-1"><a id="resume-link-1" target="_blank" class="nav-link resume">Resume</a></li>
 
                 <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
@@ -87,23 +74,6 @@
     <h1 style="margin: 50px 0;" class="sub-title">Skills</h1>
     <h1 style="color: #ff004f; margin-bottom: 40px; text-align: center;">Frontend</h1>
     <div id="frontend">
-            <!-- <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/html.png" alt="html"></span><br><span style="font-size: 20px;" class="skills-card-name">HTML</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/css.png" alt="css"></span><br><span class="skills-card-name" style="font-size: 20px;">CSS</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/javascript.png" alt="css"></span><br><span class="skills-card-name" style="font-size: 20px;">JavaScript</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/react.png" alt="react js"></span><br><span class="skills-card-name" style="font-size: 20px;">React.js</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/redux.png" alt="redux"></span><br><span class="skills-card-name" style="font-size: 20px;">Redux</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/chakraui.png" alt="chakra ui"></span><br><span class="skills-card-name" style="font-size: 20px;">Chakra UI</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px"  src="./images/bootstrap.png" alt="bootstarp"></span><br><span class="skills-card-name" style="font-size: 20px;">Bootstrap</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px"  src="./images/thunk.jpeg" alt="bootstarp"></span><br><span class="skills-card-name" style="font-size: 20px;">Redux-Thunk</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/typescript.svg" alt="typescript"></span><br><span style="font-size: 20px;" class="skills-card-name">Typescript</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/redux-toolkit.png"
-                        alt="Redux Tookit"></span><br><span style="font-size: 20px;" class="skills-card-name">Redux Toolkit</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/reactquery.png"
-                        alt="React-Query"></span><br><span style="font-size: 20px;" class="skills-card-name">React-query</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/materialui.png"
-                        alt="Material Ui"></span><br><span style="font-size: 20px;" class="skills-card-name">Material Ui</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/tailwind-css.png"
-                        alt="tailwindcss"></span><br><span style="font-size: 20px;" class="skills-card-name">Tailwindcss</span></div> -->
         <div class="skills-card">
              <div><img width="40" height="40" src="https://img.icons8.com/color/40/html-5--v1.png" alt="html" /></div>
              <div class="skills-text">HTML</div>
@@ -162,19 +132,182 @@
                                     alt="node.js" /></div>
                             <div class="skills-text">Node.js</div>
                         </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/nolan/40/express-js.png" alt="express.js" /></div>
+                            <div class="skills-text">Express.js</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/40/mongoose.png" alt="mongoose" /></div>
+                            <div class="skills-text">Mongoose</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/40/mongodb.png" alt="MongoDB" /></div>
+                            <div class="skills-text">MongoDB</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/40/firebase.png" alt="firebase" /></div>
+                            <div class="skills-text">Firebase</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/40/nestjs.png" alt="nest.js" /></div>
+                            <div class="skills-text">Nest.js</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/40/azure-relay-hybrid-connection.png" alt="Websocket" /></div>
+                            <div class="skills-text">Websocket</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/40/graphql.png" alt="graphql" /></div>
+                            <div class="skills-text">Graphql</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/nolan/40/amazon-web-services.png" alt="aws" /></div>
+                            <div class="skills-text">AWS</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/40/cloudflare.png" alt="cloudflare" /></div>
+                            <div class="skills-text">Cloudflare</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/nolan/40/apache-kafka.png" alt="apache_kafka" /></div>
+                            <div class="skills-text">Apache kafka</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://sequelize.org/img/logo.svg" alt="sequelize" /></div>
+                            <div class="skills-text">Squelize</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://www.sqlite.org/images/sqlite370_banner.gif" alt="sqlite" /></div>
+                            <div class="skills-text">SQlite</div>
+                        </div>
+                        <div>
+                            <div class="skills-card">
+                                <div><img width="40" height="40" src="https://img.icons8.com/color/40/prisma-orm.png" alt="prisma" /></div>
+                                <div class="skills-text">Prisma</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skills-card">
+                                <div><img width="40" height="40" src="https://img.icons8.com/color/48/redis--v1.png" alt="redis" /></div>
+                                <div class="skills-text">Redis</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skills-card">
+                                <div><img width="40" height="40" src="https://img.icons8.com/color/48/mysql-logo.png" alt="MYSQL" /></div>
+                                <div class="skills-text">MYSQL</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skills-card">
+                                <div><img width="40" height="40" src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="PostgreSQL" /></div>
+                                <div class="skills-text">PostgreSQL</div>
+                            </div>
+                        </div>     
+                        <div>
+                            <div class="skills-card">
+                                <div><img width="40" height="40" src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="fastapi" /></div>
+                                <div class="skills-text">Fast Api</div>
+                            </div>
+                        </div>         
     </div>
+
     <h1 style="color: #ff004f; margin: 60px 0; text-align: center;">Tools</h1>
-    <div id="toolsets">
+    <div id="frontend">
+                        <div class="skills-card">
+                            <div><img width="40" height="40"
+                                    src="https://img.icons8.com/fluency/40/docker.png"
+                                    alt="docker" /></div>
+                            <div class="skills-text">Docker</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/48/kubernetes.png" alt="kubernetes" /></div>
+                            <div class="skills-text">Kubernetes</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/48/git.png" alt="git" /></div>
+                            <div class="skills-text">Git</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/nolan/64/github.png" alt="GitHub" /></div>
+                            <div class="skills-text">GitHub</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/40/external-webpack-a-module-bundler-its-main-purpose-is-to-bundle-javascript-files-for-usage-in-a-browser-logo-duo-tal-revivo.png" alt="webpack" /></div>
+                            <div class="skills-text">Webpack</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/48/npm.png" alt="npm" /></div>
+                            <div class="skills-text">NPM</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/48/java-web-token.png" alt="jwt" /></div>
+                            <div class="skills-text">JWT</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://vitejs.dev/logo-with-shadow.png" alt="vite" /></div>
+                            <div class="skills-text">Vite</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://github.com/yarnpkg/assets/raw/master/yarn-kitten-full.png?raw=true" alt="yarn" /></div>
+                            <div class="skills-text">yarn</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="data:image/svg+xml;base64, PHN2ZyBpZD0iQnVuIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA3MCI+PHRpdGxlPkJ1biBMb2dvPC90aXRsZT48cGF0aCBpZD0iU2hhZG93IiBkPSJNNzEuMDksMjAuNzRjLS4xNi0uMTctLjMzLS4zNC0uNS0uNXMtLjMzLS4zNC0uNS0uNS0uMzMtLjM0LS41LS41LS4zMy0uMzQtLjUtLjUtLjMzLS4zNC0uNS0uNS0uMzMtLjM0LS41LS41LS4zMy0uMzQtLjUtLjVBMjYuNDYsMjYuNDYsMCwwLDEsNzUuNSwzNS43YzAsMTYuNTctMTYuODIsMzAuMDUtMzcuNSwzMC4wNS0xMS41OCwwLTIxLjk0LTQuMjMtMjguODMtMTAuODZsLjUuNS41LjUuNS41LjUuNS41LjUuNS41LjUuNUMxOS41NSw2NS4zLDMwLjE0LDY5Ljc1LDQyLDY5Ljc1YzIwLjY4LDAsMzcuNS0xMy40OCwzNy41LTMwQzc5LjUsMzIuNjksNzYuNDYsMjYsNzEuMDksMjAuNzRaIi8+PGcgaWQ9IkJvZHkiPjxwYXRoIGlkPSJCYWNrZ3JvdW5kIiBkPSJNNzMsMzUuN2MwLDE1LjIxLTE1LjY3LDI3LjU0LTM1LDI3LjU0UzMsNTAuOTEsMywzNS43QzMsMjYuMjcsOSwxNy45NCwxOC4yMiwxM1MzMy4xOCwzLDM4LDNzOC45NCw0LjEzLDE5Ljc4LDEwQzY3LDE3Ljk0LDczLDI2LjI3LDczLDM1LjdaIiBzdHlsZT0iZmlsbDojZmJmMGRmIi8+PHBhdGggaWQ9IkJvdHRvbV9TaGFkb3ciIGRhdGEtbmFtZT0iQm90dG9tIFNoYWRvdyIgZD0iTTczLDM1LjdhMjEuNjcsMjEuNjcsMCwwLDAtLjgtNS43OGMtMi43MywzMy4zLTQzLjM1LDM0LjktNTkuMzIsMjQuOTRBNDAsNDAsMCwwLDAsMzgsNjMuMjRDNTcuMyw2My4yNCw3Myw1MC44OSw3MywzNS43WiIgc3R5bGU9ImZpbGw6I2Y2ZGVjZSIvPjxwYXRoIGlkPSJMaWdodF9TaGluZSIgZGF0YS1uYW1lPSJMaWdodCBTaGluZSIgZD0iTTI0LjUzLDExLjE3QzI5LDguNDksMzQuOTQsMy40Niw0MC43OCwzLjQ1QTkuMjksOS4yOSwwLDAsMCwzOCwzYy0yLjQyLDAtNSwxLjI1LTguMjUsMy4xMy0xLjEzLjY2LTIuMywxLjM5LTMuNTQsMi4xNS0yLjMzLDEuNDQtNSwzLjA3LTgsNC43QzguNjksMTguMTMsMywyNi42MiwzLDM1LjdjMCwuNCwwLC44LDAsMS4xOUM5LjA2LDE1LjQ4LDIwLjA3LDEzLjg1LDI0LjUzLDExLjE3WiIgc3R5bGU9ImZpbGw6I2ZmZmVmYyIvPjxwYXRoIGlkPSJUb3AiIGQ9Ik0zNS4xMiw1LjUzQTE2LjQxLDE2LjQxLDAsMCwxLDI5LjQ5LDE4Yy0uMjguMjUtLjA2LjczLjMuNTksMy4zNy0xLjMxLDcuOTItNS4yMyw2LTEzLjE0QzM1LjcxLDUsMzUuMTIsNS4xMiwzNS4xMiw1LjUzWm0yLjI3LDBBMTYuMjQsMTYuMjQsMCwwLDEsMzksMTljLS4xMi4zNS4zMS42NS41NS4zNkM0MS43NCwxNi41Niw0My42NSwxMSwzNy45Myw1LDM3LjY0LDQuNzQsMzcuMTksNS4xNCwzNy4zOSw1LjQ5Wm0yLjc2LS4xN0ExNi40MiwxNi40MiwwLDAsMSw0NywxNy4xMmEuMzMuMzMsMCwwLDAsLjY1LjExYy45Mi0zLjQ5LjQtOS40NC03LjE3LTEyLjUzQzQwLjA4LDQuNTQsMzkuODIsNS4wOCw0MC4xNSw1LjMyWk0yMS42OSwxNS43NmExNi45NCwxNi45NCwwLDAsMCwxMC40Ny05Yy4xOC0uMzYuNzUtLjIyLjY2LjE4LTEuNzMsOC03LjUyLDkuNjctMTEuMTIsOS40NUMyMS4zMiwxNi40LDIxLjMzLDE1Ljg3LDIxLjY5LDE1Ljc2WiIgc3R5bGU9ImZpbGw6I2NjYmVhNztmaWxsLXJ1bGU6ZXZlbm9kZCIvPjxwYXRoIGlkPSJPdXRsaW5lIiBkPSJNMzgsNjUuNzVDMTcuMzIsNjUuNzUuNSw1Mi4yNy41LDM1LjdjMC0xMCw2LjE4LTE5LjMzLDE2LjUzLTI0LjkyLDMtMS42LDUuNTctMy4yMSw3Ljg2LTQuNjIsMS4yNi0uNzgsMi40NS0xLjUxLDMuNi0yLjE5QzMyLDEuODksMzUsLjUsMzgsLjVzNS42MiwxLjIsOC45LDMuMTRjMSwuNTcsMiwxLjE5LDMuMDcsMS44NywyLjQ5LDEuNTQsNS4zLDMuMjgsOSw1LjI3QzY5LjMyLDE2LjM3LDc1LjUsMjUuNjksNzUuNSwzNS43LDc1LjUsNTIuMjcsNTguNjgsNjUuNzUsMzgsNjUuNzVaTTM4LDNjLTIuNDIsMC01LDEuMjUtOC4yNSwzLjEzLTEuMTMuNjYtMi4zLDEuMzktMy41NCwyLjE1LTIuMzMsMS40NC01LDMuMDctOCw0LjdDOC42OSwxOC4xMywzLDI2LjYyLDMsMzUuNywzLDUwLjg5LDE4LjcsNjMuMjUsMzgsNjMuMjVTNzMsNTAuODksNzMsMzUuN0M3MywyNi42Miw2Ny4zMSwxOC4xMyw1Ny43OCwxMyw1NCwxMSw1MS4wNSw5LjEyLDQ4LjY2LDcuNjRjLTEuMDktLjY3LTIuMDktMS4yOS0zLTEuODRDNDIuNjMsNCw0MC40MiwzLDM4LDNaIi8+PC9nPjxnIGlkPSJNb3V0aCI+PGcgaWQ9IkJhY2tncm91bmQtMiIgZGF0YS1uYW1lPSJCYWNrZ3JvdW5kIj48cGF0aCBkPSJNNDUuMDUsNDNhOC45Myw4LjkzLDAsMCwxLTIuOTIsNC43MSw2LjgxLDYuODEsMCwwLDEtNCwxLjg4QTYuODQsNi44NCwwLDAsMSwzNCw0Ny43MSw4LjkzLDguOTMsMCwwLDEsMzEuMTIsNDNhLjcyLjcyLDAsMCwxLC44LS44MUg0NC4yNkEuNzIuNzIsMCwwLDEsNDUuMDUsNDNaIiBzdHlsZT0iZmlsbDojYjcxNDIyIi8+PC9nPjxnIGlkPSJUb25ndWUiPjxwYXRoIGlkPSJCYWNrZ3JvdW5kLTMiIGRhdGEtbmFtZT0iQmFja2dyb3VuZCIgZD0iTTM0LDQ3Ljc5YTYuOTEsNi45MSwwLDAsMCw0LjEyLDEuOSw2LjkxLDYuOTEsMCwwLDAsNC4xMS0xLjksMTAuNjMsMTAuNjMsMCwwLDAsMS0xLjA3LDYuODMsNi44MywwLDAsMC00LjktMi4zMSw2LjE1LDYuMTUsMCwwLDAtNSwyLjc4QzMzLjU2LDQ3LjQsMzMuNzYsNDcuNiwzNCw0Ny43OVoiIHN0eWxlPSJmaWxsOiNmZjYxNjQiLz48cGF0aCBpZD0iT3V0bGluZS0yIiBkYXRhLW5hbWU9Ik91dGxpbmUiIGQ9Ik0zNC4xNiw0N2E1LjM2LDUuMzYsMCwwLDEsNC4xOS0yLjA4LDYsNiwwLDAsMSw0LDEuNjljLjIzLS4yNS40NS0uNTEuNjYtLjc3YTcsNywwLDAsMC00LjcxLTEuOTMsNi4zNiw2LjM2LDAsMCwwLTQuODksMi4zNkE5LjUzLDkuNTMsMCwwLDAsMzQuMTYsNDdaIi8+PC9nPjxwYXRoIGlkPSJPdXRsaW5lLTMiIGRhdGEtbmFtZT0iT3V0bGluZSIgZD0iTTM4LjA5LDUwLjE5YTcuNDIsNy40MiwwLDAsMS00LjQ1LTIsOS41Miw5LjUyLDAsMCwxLTMuMTEtNS4wNSwxLjIsMS4yLDAsMCwxLC4yNi0xLDEuNDEsMS40MSwwLDAsMSwxLjEzLS41MUg0NC4yNmExLjQ0LDEuNDQsMCwwLDEsMS4xMy41MSwxLjE5LDEuMTksMCwwLDEsLjI1LDFoMGE5LjUyLDkuNTIsMCwwLDEtMy4xMSw1LjA1QTcuNDIsNy40MiwwLDAsMSwzOC4wOSw1MC4xOVptLTYuMTctNy40Yy0uMTYsMC0uMi4wNy0uMjEuMDlhOC4yOSw4LjI5LDAsMCwwLDIuNzMsNC4zN0E2LjIzLDYuMjMsMCwwLDAsMzguMDksNDlhNi4yOCw2LjI4LDAsMCwwLDMuNjUtMS43Myw4LjMsOC4zLDAsMCwwLDIuNzItNC4zNy4yMS4yMSwwLDAsMC0uMi0uMDlaIi8+PC9nPjxnIGlkPSJGYWNlIj48ZWxsaXBzZSBpZD0iUmlnaHRfQmx1c2giIGRhdGEtbmFtZT0iUmlnaHQgQmx1c2giIGN4PSI1My4yMiIgY3k9IjQwLjE4IiByeD0iNS44NSIgcnk9IjMuNDQiIHN0eWxlPSJmaWxsOiNmZWJiZDAiLz48ZWxsaXBzZSBpZD0iTGVmdF9CbHVjaCIgZGF0YS1uYW1lPSJMZWZ0IEJsdWNoIiBjeD0iMjIuOTUiIGN5PSI0MC4xOCIgcng9IjUuODUiIHJ5PSIzLjQ0IiBzdHlsZT0iZmlsbDojZmViYmQwIi8+PHBhdGggaWQ9IkV5ZXMiIGQ9Ik0yNS43LDM4LjhhNS41MSw1LjUxLDAsMSwwLTUuNS01LjUxQTUuNTEsNS41MSwwLDAsMCwyNS43LDM4LjhabTI0Ljc3LDBBNS41MSw1LjUxLDAsMSwwLDQ1LDMzLjI5LDUuNSw1LjUsMCwwLDAsNTAuNDcsMzguOFoiIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZCIvPjxwYXRoIGlkPSJJcmlzIiBkPSJNMjQsMzMuNjRhMi4wNywyLjA3LDAsMSwwLTIuMDYtMi4wN0EyLjA3LDIuMDcsMCwwLDAsMjQsMzMuNjRabTI0Ljc3LDBhMi4wNywyLjA3LDAsMSwwLTIuMDYtMi4wN0EyLjA3LDIuMDcsMCwwLDAsNDguNzUsMzMuNjRaIiBzdHlsZT0iZmlsbDojZmZmO2ZpbGwtcnVsZTpldmVub2RkIi8+PC9nPjwvc3ZnPg==" alt="cloudflare" /></div>
+                            <div class="skills-text">BUN</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://docs.vendure.io/assets/images/deploy-to-render-b2b7fbd4d3153076c1e91c3d9969a719.webp" alt="render" /></div>
+                            <div class="skills-text">Render</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/40/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png" alt="netlify" /></div>
+                            <div class="skills-text">Netlify</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/88386310-eb15-4b09-ab33-fa18ce82e847.png?w=100&q=50" alt="vercel" /></div>
+                            <div class="skills-text">Vercel</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg" alt="postman" /></div>
+                            <div class="skills-text">Postman</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/48/figma--v1.png" alt="figma" /></div>
+                            <div class="skills-text">Figma</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/tiny-color/40/notion.png" alt="notion" /></div>
+                            <div class="skills-text">Notion</div>
+                        </div>
+    </div>
 
-            <!-- <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/github.webp" alt="github"></span><br><span class="skills-card-name" style="font-size: 20px;">Github</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/netlify.png" alt="netlify"></span><br><span class="skills-card-name" style="font-size: 20px;">Netlify</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/vercel.jpeg" alt="vercel"></span><br><span class="skills-card-name" style="font-size: 20px;">Vercel</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/figma.png" alt="figma"></span><br><span class="skills-card-name" style="font-size: 20px;">Figma</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/vscode.webp" alt="Visual Studio"></span><br><span class="skills-card-name" style="font-size: 20px;">Visual Studio</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/postman.png" alt="Postman"></span><br><span class="skills-card-name" style="font-size: 20px;">Postman</span></div>
-            <div class="skills-card"><span><img class="skills-card-img" width="50px" src="./images/docker.png"
-                        alt="docker"></span><br><span class="skills-card-name" style="font-size: 20px;">Docker</span></div> -->
-
+    <h1 style="color: #ff004f; margin: 60px 0; text-align: center;">Languages</h1>
+    <div id="frontend">
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/nolan/64/c-plus-plus.png" alt="cpp" /></div>
+                            <div class="skills-text">C++</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript" /></div>
+                            <div class="skills-text">Javascript</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/fluency/48/java-coffee-cup-logo.png" alt="java" /></div>
+                            <div class="skills-text">Java</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/48/typescript.png" alt="typescript" /></div>
+                            <div class="skills-text">Typescript</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/color/48/python--v1.png" alt="python" /></div>
+                            <div class="skills-text">Python</div>
+                        </div>
+                        <div class="skills-card">
+                            <div><img width="40" height="40" src="https://img.icons8.com/arcade/64/sql.png" alt="sql"/></div>
+                            <div class="skills-text">SQL</div>
+                        </div>
     </div>
 </div>
 
@@ -326,6 +459,11 @@
                                 <td >CSS</td>
                             </tr>
                         </table>
+                        
+
+
+
+
             </div>
 
             <div style="width: 300px;" class="project-card work">
@@ -355,6 +493,7 @@
                     </tr>
                 </table>
             </div>
+            
         </div>
         <a href="#" class="btn">See more</a>
     </div>
