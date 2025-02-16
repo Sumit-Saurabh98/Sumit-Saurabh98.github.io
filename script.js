@@ -106,46 +106,97 @@ const skills = [
 
 // Custom Cursor
 const cursorDot = document.querySelector(".cursor-dot");
-const cursorOutline = document.querySelector(".cursor-outline");
+const maxTrails = 25; // Increased number of trails
+const trails = [];
+let currentTrailIndex = 0;
+let lastX = 0;
+let lastY = 0;
+let isMoving = false;
+let moveTimer;
 
+// Create trail elements
+function createTrails() {
+  for (let i = 0; i < maxTrails; i++) {
+    const trail = document.createElement("div");
+    trail.className = "cursor-trail";
+    document.body.appendChild(trail);
+    trails.push(trail);
+  }
+}
+
+// Initialize trails
+createTrails();
+
+// Main cursor movement
 window.addEventListener("mousemove", (e) => {
   const posX = e.clientX;
   const posY = e.clientY;
 
-  cursorDot.style.left = `${posX}px`;
-  cursorDot.style.top = `${posY}px`;
+  // Calculate distance moved
+  const distance = Math.hypot(posX - lastX, posY - lastY);
 
-  // Add slight delay to outline for smooth effect
-  setTimeout(() => {
-    cursorOutline.style.left = `${posX}px`;
-    cursorOutline.style.top = `${posY}px`;
-  }, 80);
+  // Only create trail if mouse moved enough
+  if (distance > 5) {
+    // Reduced distance threshold
+    const trail = trails[currentTrailIndex];
+    trail.style.left = `${lastX}px`;
+    trail.style.top = `${lastY}px`;
+
+    // Apply animations
+    trail.style.animation = `trailFadeOut 0.5s ease forwards, trailColor 0.5s ease infinite`;
+
+    // Clear previous animations after they complete
+    setTimeout(() => {
+      trail.style.animation = "";
+      trail.style.opacity = "0";
+    }, 500);
+
+    currentTrailIndex = (currentTrailIndex + 1) % maxTrails;
+    lastX = posX;
+    lastY = posY;
+  }
+
+  if (!isMoving) {
+    isMoving = true;
+  }
+
+  // Clear previous timer
+  clearTimeout(moveTimer);
+
+  // Set new timer
+  moveTimer = setTimeout(() => {
+    isMoving = false;
+  }, 100);
 });
 
-// Hide cursor when leaving window
+// Hide trails when leaving window
 document.addEventListener("mouseleave", () => {
-  cursorDot.style.opacity = "0";
-  cursorOutline.style.opacity = "0";
+  trails.forEach((trail) => {
+    trail.style.opacity = "0";
+    trail.style.animation = "";
+  });
 });
 
 document.addEventListener("mouseenter", () => {
-  cursorDot.style.opacity = "1";
-  cursorOutline.style.opacity = "1";
+  const pos = { x: event.clientX, y: event.clientY };
+  lastX = pos.x;
+  lastY = pos.y;
 });
 
 // Cursor hover effect on interactive elements
 const interactiveElements = document.querySelectorAll(
-  "a, button, .menu-btn, .project-card"
+  "a, button, .menu-btn, .project-card, input, textarea"
 );
+
 interactiveElements.forEach((el) => {
   el.addEventListener("mouseover", () => {
-    cursorOutline.style.transform = "translate(-50%, -50%) scale(1.5)";
-    cursorOutline.style.borderColor = "var(--accent-color)";
+    cursorDot.classList.add("active");
   });
 
   el.addEventListener("mouseleave", () => {
-    cursorOutline.style.transform = "translate(-50%, -50%) scale(1)";
-    cursorOutline.style.borderColor = "var(--primary-color)";
+    if (!isMoving) {
+      cursorDot.classList.remove("active");
+    }
   });
 });
 
