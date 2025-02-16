@@ -600,6 +600,8 @@ button,
 .menu-btn,
 .project-card,
 input,
-textarea {
+textarea,
+.social-links a,
+.info-item i {
   cursor: pointer;
 }
