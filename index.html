@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumit Saurabh - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-content">
+        <div class="logo">SS</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <img
+          src="./images/profile.png"
+          alt="Sumit Saurabh"
+          class="profile-image"
+        />
+        <h1>Hi, I'm Sumit Saurabh</h1>
+        <h2>Full Stack Developer & DevOps Engineer</h2>
+        <div class="cta-buttons">
+          <a href="./images/resume.pdf" download class="btn primary"
+            >Download Resume</a
+          >
+          <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a passionate full-stack developer with expertise in building
+            modern web applications. With over 1+ years of experience in the
+            industry, I've worked on various personal projects ranging from
+            small business websites to large-scale enterprise applications.
+          </p>
+          <p>
+            My goal is to create beautiful, functional, and user-friendly
+            applications that solve real-world problems. I'm constantly learning
+            new technologies and best practices to stay at the forefront of web
+            development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="experience-card">
+        <h3>Technical mentor and Full Stack Developer Trainer</h3>
+        <p class="company">Kalvium ptd. ltd.</p>
+        <p class="period">Nov 2023 - Present</p>
+        <p class="location">Bangalore, IN</p>
+        <ul>
+          <li>Mentored junior developers and conducted code reviews</li>
+          <li>
+            Developed and maintained multiple client-facing web applications
+          </li>
+          <li>
+            Implemented responsive designs and ensured cross-browser
+            compatibility
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid" id="projects-container">
+        <!-- Projects will be populated via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <!-- Skills will be populated via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>sumitsaurabh112@gmail.com</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <p>+91 9318411328</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>New Delhi, IN</p>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/sumit-saurabh98" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://linkedin.com/in/iamrealsubh" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://x.com/Devid_Smith_" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Sumit Saurabh. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
