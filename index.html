@@ -15,146 +15,283 @@
     ></script>
   </head>
   <body>
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
     <!-- Navigation -->
-    <nav>
-      <div class="nav-content">
-        <div class="logo">SS</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>Sumit Saurabh</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#posts" class="nav-link">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
         </ul>
-        <div class="menu-btn">
-          <i class="fas fa-bars"></i>
+        <div class="nav-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <div class="hero-content">
-        <img
-          src="./images/profile.png"
-          alt="Sumit Saurabh"
-          class="profile-image"
-        />
-        <h1>Hi, I'm Sumit Saurabh</h1>
-        <h2>Full Stack Developer & DevOps Engineer</h2>
-        <div class="cta-buttons">
-          <a href="./images/sumit-saurabh-full-stack-developer.pdf" download class="btn primary"
-            >Download Resume</a
-          >
-          <a href="#contact" class="btn secondary">Contact Me</a>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Hi, I'm <span class="highlight">Sumit Saurabh</span></h1>
+            <h2 class="hero-subtitle">Full Stack Developer & DevOps Engineer</h2>
+            <p class="hero-description">
+              I create beautiful, functional, and user-friendly applications that solve real-world problems.
+            </p>
+            <div class="hero-buttons">
+              <a href="./images/Sumit Saurabh Full Stack Developer Resume.pdf" download class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Download Resume
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i>
+                Contact Me
+              </a>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/sumit-saurabh98" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/iamrealsubh" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://x.com/Devid_Smith_" target="_blank" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-container">
+              <img src="./images/profile.png" alt="Sumit Saurabh" class="profile-img" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>
-            I'm a passionate full-stack developer with expertise in building
-            modern web applications. With over 1+ years of experience in the
-            industry, I've worked on various personal projects ranging from
-            small business websites to large-scale enterprise applications.
-          </p>
-          <p>
-            My goal is to create beautiful, functional, and user-friendly
-            applications that solve real-world problems. I'm constantly learning
-            new technologies and best practices to stay at the forefront of web
-            development.
-          </p>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate full-stack developer with expertise in building modern web applications. 
+              With over 1.5+ years of experience in the industry, I've worked on various projects 
+              ranging from small business websites to large-scale enterprise applications.
+            </p>
+            <p>
+              My goal is to create beautiful, functional, and user-friendly applications that solve 
+              real-world problems. I'm constantly learning new technologies and best practices to stay 
+              at the forefront of web development.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <h3>50+</h3>
+                <p>Projects Completed</p>
+              </div>
+              <div class="stat-item">
+                <h3>1.5+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat-item">
+                <h3>25+</h3>
+                <p>Technologies</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
-      <h2 class="section-title">Experience</h2>
-      <div class="experience-card">
-        <h3>Technical mentor and Full Stack Developer Trainer</h3>
-        <p class="company">Kalvium ptd. ltd.</p>
-        <p class="period">Nov 2023 - Present</p>
-        <p class="location">Bangalore, IN</p>
-        <ul>
-          <li>Mentored junior developers and conducted code reviews</li>
-          <li>
-            Developed and maintained multiple client-facing web applications
-          </li>
-          <li>
-            Implemented responsive designs and ensured cross-browser
-            compatibility
-          </li>
-        </ul>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Experience</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Nov 2023 - Present</div>
+              <h3>Full Stack Developer and Technical Mentor</h3>
+              <h4>Kalvium Pvt. Ltd.</h4>
+              <p class="location">Bangalore, IN</p>
+              <ul class="timeline-list">
+                <li>Developed the frontend of a Learning Management System (LMS), improving overall system performance by 9%.</li>
+                <li>Created an online attendance system to replace manual tracking.</li>
+                <li>Mentored 50+ CSE students in full-stack development, 40+ secured placements within their first year.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid" id="projects-container">
-        <!-- Projects will be populated via JavaScript -->
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="projects-grid" id="projects-container">
+          <!-- Projects will be populated via JavaScript -->
+        </div>
+        <div class="projects-controls">
+          <button id="show-more-btn" class="btn btn-outline" style="display: none;">
+            Show More Projects
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <!-- Skills will be populated via JavaScript -->
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Skills & Technologies</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="skills-container">
+          <div class="skills-grid" id="skills-container">
+            <!-- Skills will be populated via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LinkedIn Posts Section -->
+    <section id="posts" class="posts">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Testimonials</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="posts-grid" id="posts-container">
+          <!-- LinkedIn posts will be populated via JavaScript -->
+        </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-      <h2 class="section-title">Contact Me</h2>
-      <div class="contact-container">
-        <div class="contact-info">
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <p>sumitsaurabh112@gmail.com</p>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p>I'm always open to discussing new opportunities and interesting projects.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Email</h4>
+                  <p>contact@sumitsaurabh.dev</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Phone</h4>
+                  <p>+91 9318411328</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Location</h4>
+                  <p>New Delhi, IN</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <a href="https://github.com/sumit-saurabh98" target="_blank" class="social-btn">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/iamrealsubh" target="_blank" class="social-btn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://x.com/Devid_Smith_" target="_blank" class="social-btn">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
           </div>
-          <div class="info-item">
-            <i class="fas fa-phone"></i>
-            <p>+91 9318411328</p>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>New Delhi, IN</p>
-          </div>
-          <div class="social-links">
-            <a href="https://github.com/sumit-saurabh98" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a href="https://linkedin.com/in/iamrealsubh" target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="https://x.com/Devid_Smith_" target="_blank"
-              ><i class="fab fa-twitter"></i
-            ></a>
+
+          <div class="contact-form-container">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+              <div id="form-message" class="form-message"></div>
+            </form>
           </div>
         </div>
-        <form id="contact-form" class="contact-form">
-          <input type="text" id="name" placeholder="Your Name" required />
-          <input type="email" id="email" placeholder="Your Email" required />
-          <textarea id="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn primary">Send Message</button>
-          <div id="form-message" class="form-message"></div>
-        </form>
       </div>
     </section>
 
-    <footer>
-      <p>&copy; 2024 Sumit Saurabh. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2025 Sumit Saurabh. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#home">Back to Top</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
