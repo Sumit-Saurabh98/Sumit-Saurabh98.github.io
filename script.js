@@ -3,7 +3,7 @@ const projects = [
   {
     title: "RecoredFree",
     description: "A user-friendly platform designed to simplify video sharing and screen recording.",
-    images: ["./images/recordfree/rf1.png", "./images/recordfree/rf2.png", "./images/recordfree/rf3.png", "./images/recordfree/rf4.png"],
+    images: ["./images/recordfree/rf1.jpeg", "./images/recordfree/rf2.jpeg", "./images/recordfree/rf3.jpeg", "./images/recordfree/rf4.jpeg"],
     github: "https://github.com/Sumit-Saurabh98/recordfree",
     demo: "https://recordfree.kalvium.in/",
   },
