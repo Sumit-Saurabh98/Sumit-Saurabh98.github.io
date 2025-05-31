@@ -57,6 +57,13 @@ const projects = [
     demo: "https://soft-rolypoly-d1ba4d.netlify.app/",
   },
   {
+    title: "Over Stock",
+    description: "A full-featured E-commerce web application for buying and selling fernitures.",
+    images: ["./images/overstock/over1.jpeg", "./images/overstock/over2.jpeg", "./images/overstock/over3.jpeg", "./images/overstock/over4.jpeg"],
+    github: "https://github.com/Sumit-Saurabh98/overstock-project-clone",
+    demo: "https://overstock-project-clone.vercel.app/",
+  },
+  {
     title: "Stack Overflow",
     description: "It is a clone of Stack Overflow.",
     images: ["./images/stackoverflow/so1.jpeg", "./images/stackoverflow/so2.jpeg", "./images/stackoverflow/so3.jpeg", "./images/stackoverflow/so4.jpeg"],
