@@ -1,6 +1,13 @@
 // Projects Data - Updated with multiple images for carousel
 const projects = [
   {
+    title: "Invoice",
+    description: "A full-featured Invoice management web application.",
+    images: ["./images/invoice/invoice1.jpeg", "./images/invoice/invoice2.jpeg", "./images/invoice/invoice3.jpeg", "./images/invoice/invoice4.jpeg"],
+    github: "https://github.com/Sumit-Saurabh98/invoice",
+    demo: "https://invoice.kalvium.in/",
+  },
+  {
     title: "RecoredFree",
     description: "A user-friendly platform designed to simplify video sharing and screen recording.",
     images: ["./images/recordfree/rf1.jpeg", "./images/recordfree/rf2.jpeg", "./images/recordfree/rf3.jpeg", "./images/recordfree/rf4.jpeg"],
