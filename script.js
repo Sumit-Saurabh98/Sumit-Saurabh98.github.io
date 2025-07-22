@@ -1,11 +1,18 @@
 // Projects Data - Updated with multiple images for carousel
 const projects = [
   {
+    title: "Readable LMS",
+    description: "A scalable, full-featured LMS platform in Next.js 15 with secure authentication, rich analytics, video streaming, Stripe payments, and a modern, responsive UI.",
+    images: ["./images/readablelms/read1.jpeg", "./images/readablelms/read2.jpeg", "./images/readablelms/read3.jpeg", "./images/readablelms/read4.jpeg"],
+    github: "https://github.com/Sumit-Saurabh98/readable",
+    demo: "https://readablelms.sumitsaurabh.dev/",
+  },
+  {
     title: "Invoice",
     description: "A full-featured Invoice management web application.",
     images: ["./images/invoice/invoice1.jpeg", "./images/invoice/invoice2.jpeg", "./images/invoice/invoice3.jpeg", "./images/invoice/invoice4.jpeg"],
     github: "https://github.com/Sumit-Saurabh98/invoice",
-    demo: "https://invoice.kalvium.in/",
+    demo: "https://invoice.sumitsaurabh.dev/",
   },
   {
     title: "RecoredFree",
@@ -26,7 +33,7 @@ const projects = [
     description: "A fully-featured E-commerce web application.",
     images: ["./images/shopsy/shop1.jpeg", "./images/shopsy/shop2.jpeg", "./images/shopsy/shop3.jpeg", "./images/shopsy/shop4.jpeg"],
     github: "https://github.com/Sumit-Saurabh98/Shopsy",
-    demo: "https://shopsy.kalvium.in/",
+    demo: "https://shopsy.sumitsaurabh.dev/",
   },
   {
     title: "FOMO",
