@@ -1,5 +1,52 @@
+// Experiences Data
+const experiences = [
+  {
+    date: "September 2025 - Present",
+    title: "Software Developer",
+    company: "DDReg pharma",
+    location: "Gurugram, IN",
+    responsibilities: [
+      "Designed and developed an admin dashboard for pharma regulatory management using Next.js, Node.js, Express,and MongoDB with role-based authentication.",
+      "Engineered a complete audit-logs system, tracking every user action with before/after data snapshots.",
+      "Developed a Recycle Bin module with data restore and permanent delete action, implemented soft delete.",
+      "Maintained and enhanced an existing pharma marketplace platform, adding multiple new modules."
+    ]
+  },
+  {
+    date: "November 2023 - July 2025",
+    title: "Technical Mentor",
+    company: "Kalvium Pvt. Ltd.",
+    location: "Bangalore, IN",
+    responsibilities: [
+      "Built an automated assignment evaluation tool using React.js, Node.js, and Gemini API, reducing manual review time by 95% through pull request analysis and AI-generated feedback.",
+      "Developed a performant Learning Management System(LMS) with React.js, Redux, Chakra UI, and RTK Query, boosting efficiency by 15% via client-side caching.",
+      "Designed scalable RESTful APIs for the Management System(LMS), ensuring high reliability for 3,000+ daily users.",
+      "Co-created a real-time attendance system using facial recognition, adopted by over 2,000 users across institutions.",
+      "Mentored 50+ junior developers, guiding them through real-world projects and code reviews."
+    ]
+  },
+  {
+    date: "July 2023 - September 2023",
+    title: "Frontend Developer Intern",
+    company: "PyTech",
+    location: "Remote",
+    responsibilities: [
+      "Maintained and enhanced the Student Management Portal using React.js to improve performance and usability.",
+      "Developed a resume-verification tracking system to streamline student resume approval workflows.",
+      "Designed and built an end-to-end job-application module enabling students to apply, track, and manage job applications within the portal."
+    ]
+  }
+];
+
 // Projects Data - Updated with multiple images for carousel
 const projects = [
+  {
+    title: "Hello Chat",
+    description: "A microservices realtime chat application with modern UI/UX with responsive design.",
+    images: ["./images/hellochat/chat1.jpeg", "./images/hellochat/chat2.jpeg", "./images/hellochat/chat3.jpeg", "./images/hellochat/chat4.jpeg"],
+    github: "https://github.com/Sumit-Saurabh98/hellochat",
+    demo: "https://hellochat.sumitsaurabh.dev/",
+  },
   {
     title: "Readable LMS",
     description: "A scalable, full-featured LMS platform in Next.js 15 with secure authentication, rich analytics, video streaming, Stripe payments, and a modern, responsive UI.",
@@ -9,7 +56,7 @@ const projects = [
   },
   {
     title: "Invoice",
-    description: "A full-featured Invoice management web application.",
+    description: "A full-featured Invoice management web application with modern UI/UX and responsive design and PDF generation.",
     images: ["./images/invoice/invoice1.jpeg", "./images/invoice/invoice2.jpeg", "./images/invoice/invoice3.jpeg", "./images/invoice/invoice4.jpeg"],
     github: "https://github.com/Sumit-Saurabh98/invoice",
     demo: "https://invoice.sumitsaurabh.dev/",
@@ -283,9 +330,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="${project.github}" target="_blank">
               <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="${project.demo}" target="_blank">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
           </div>
         </div>
       `;
@@ -335,6 +379,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize projects
   renderProjects(PROJECTS_PER_PAGE);
+
+  // Populate Experiences
+  const experienceContainer = document.getElementById("experience-container");
+  if (experienceContainer) {
+    experiences.forEach((experience) => {
+      const timelineItem = document.createElement("div");
+      timelineItem.className = "timeline-item";
+
+      const responsibilitiesList = experience.responsibilities.map(resp => `<li>${resp}</li>`).join('');
+
+      timelineItem.innerHTML = `
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">${experience.date}</div>
+          <h3>${experience.title}</h3>
+          <h4>${experience.company}</h4>
+          <p class="location">${experience.location}</p>
+          <ul class="timeline-list">
+            ${responsibilitiesList}
+          </ul>
+        </div>
+      `;
+
+      experienceContainer.appendChild(timelineItem);
+    });
+  }
 
   // Populate Skills
   const skillsContainer = document.getElementById("skills-container");
@@ -473,8 +543,8 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 
-  // Observe project cards and skill items for staggered animations
-  document.querySelectorAll('.project-card, .skill-item, .stat-item').forEach((item, index) => {
+  // Observe project cards, skill items, and timeline items for staggered animations
+  document.querySelectorAll('.project-card, .skill-item, .stat-item, .timeline-item').forEach((item, index) => {
     item.style.animationDelay = `${index * 0.1}s`;
     observer.observe(item);
   });
