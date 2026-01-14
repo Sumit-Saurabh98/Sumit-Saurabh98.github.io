@@ -15,7 +15,7 @@ const experiences = [
   },
   {
     date: "November 2023 - July 2025",
-    title: "Technical Mentor",
+    title: "Full Stack Developer",
     company: "Kalvium Pvt. Ltd.",
     location: "Bangalore, IN",
     logo: "./images/company/kalvium.jpg",
@@ -23,8 +23,7 @@ const experiences = [
       "Built an automated assignment evaluation tool using React.js, Node.js, and Gemini API, reducing manual review time by 95% through pull request analysis and AI-generated feedback.",
       "Developed a performant Learning Management System(LMS) with React.js, Redux, Chakra UI, and RTK Query, boosting efficiency by 15% via client-side caching.",
       "Designed scalable RESTful APIs for the Management System(LMS), ensuring high reliability for 3,000+ daily users.",
-      "Co-created a real-time attendance system using facial recognition, adopted by over 2,000 users across institutions.",
-      "Mentored 50+ junior developers, guiding them through real-world projects and code reviews.",
+      "Co-created a real-time attendance system using facial recognition, adopted by over 2,000 users across institutions."
     ],
   },
   {
@@ -265,6 +264,18 @@ const skills = [
     category: "backend",
     level: 75,
   },
+  {
+    name: "Python",
+    icon: "fab fa-python",
+    category: "backend",
+    level: 35,
+  },
+  {
+    name: "FastAPI",
+    icon: "fas fa-rocket",
+    category: "backend",
+    level: 80,
+  },
   { name: "Git", icon: "fab fa-git-alt", category: "tools", level: 90 },
   { name: "GitHub", icon: "fab fa-github", category: "tools", level: 88 },
   { name: "AWS", icon: "fab fa-aws", category: "tools", level: 70 },
@@ -282,25 +293,7 @@ const skills = [
   { name: "Deployment", icon: "fas fa-rocket", category: "tools", level: 82 },
 ];
 
-// LinkedIn Testimonials Data
-const testimonials = [
-  {
-    embedUrl:
-      "https://www.linkedin.com/embed/feed/update/urn:li:share:7327572646005526528",
-  },
-  {
-    embedUrl:
-      "https://www.linkedin.com/embed/feed/update/urn:li:share:7325052615401111552",
-  },
-  {
-    embedUrl:
-      "https://www.linkedin.com/embed/feed/update/urn:li:share:7298995334876184576",
-  },
-  {
-    embedUrl:
-      "https://www.linkedin.com/embed/feed/update/urn:li:share:7323718097746460672",
-  },
-];
+
 
 // Initialize EmailJS
 (function () {
@@ -659,28 +652,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial render
   renderSkills();
 
-  // Populate LinkedIn Testimonials
-  const postsContainer = document.getElementById("posts-container");
-  if (postsContainer && testimonials.length > 0) {
-    testimonials.forEach((testimonial) => {
-      const linkedinCard = document.createElement("div");
-      linkedinCard.className = "linkedin-card";
 
-      linkedinCard.innerHTML = `
-        <iframe
-          src="${testimonial.embedUrl}"
-          class="linkedin-iframe"
-          height="500"
-          width="100%"
-          frameborder="0"
-          allowfullscreen=""
-          title="Embedded LinkedIn testimonial"
-        ></iframe>
-      `;
-
-      postsContainer.appendChild(linkedinCard);
-    });
-  }
 
   // Handle Contact Form
   const contactForm = document.getElementById("contact-form");
@@ -790,10 +762,10 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 
-  // Observe project cards, skill items, timeline items, and linkedin cards for staggered animations
+  // Observe project cards, skill items, timeline items for staggered animations
   document
     .querySelectorAll(
-      ".project-card, .skill-item, .stat-item, .timeline-item, .linkedin-card"
+      ".project-card, .skill-item, .stat-item, .timeline-item"
     )
     .forEach((item, index) => {
       item.style.animationDelay = `${index * 0.1}s`;
